@@ -62,7 +62,8 @@
       (annotation "lightgoldenrod")
       (annotation2 "slategray2")
       (match "sienna")
-      (warning "lightgoldenrod")) ; temporary
+      (warning "lightgoldenrod")
+      (modeline-bg "#3E4038"))
   (custom-theme-set-faces
    'happy-coder
    ;;; Code
@@ -106,6 +107,17 @@
    `(highlight ((,class (:foreground ,fg :background ,selection))))
    `(lazy-highlight ((,class (:foregorund nil))))
    `(minibuffer-prompt ((,class (:foreground ,annotation))))
+
+   ;; mode-line
+   `(mode-line ((,class (:foreground ,fg :background ,modeline-bg))))
+   `(mode-line-buffer-id ((,class (:weight normal))))
+
+   ;; telephone-line
+   `(telephone-line-accent-active ((,class (:foreground ,fg :background ,"#5E4D66"))))
+   `(telephone-line-evil-insert ((,class (:foreground ,fg :background ,match))))
+   `(telephone-line-evil-visual ((,class (:foreground ,fg :background ,match))))
+   `(telephone-line-evil-replace ((,class (:foreground ,fg :background ,match))))
+   `(telephone-line-evil-normal ((,class (:foreground ,fg :background ,selection))))
 
    ;; linum / nlinum
    `(linum ((,class (:foreground ,comment1 :background ,bg))))
